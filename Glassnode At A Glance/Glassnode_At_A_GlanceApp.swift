@@ -9,9 +9,16 @@ import SwiftUI
 
 @main
 struct Glassnode_At_A_GlanceApp: App {
+    var width = CGFloat(400)
+    var height = CGFloat(160)
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainWindowView()
+                .frame(width: width, height: height)
         }
+        .windowResizability(.contentSize)
+        .windowToolbarStyle(.automatic)
+        .handlesExternalEvents(matching: Set(arrayLiteral: "addapikey"))
     }
 }
