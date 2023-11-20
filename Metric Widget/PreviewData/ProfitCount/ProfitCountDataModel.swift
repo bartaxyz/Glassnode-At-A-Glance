@@ -7,9 +7,10 @@
 
 import Foundation
 
-struct ProfitDataPoint: Codable {
+struct ProfitDataPoint: Codable, Identifiable {
     let t: Int
     let v: Int
+    var id: Int { t }
 }
 
 // To handle the full data as an array of data points

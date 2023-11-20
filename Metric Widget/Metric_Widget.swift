@@ -7,6 +7,17 @@
 
 import WidgetKit
 import SwiftUI
+import Charts
+
+func formatNumber(value: Int) -> String {
+    let customFormatter = NumberFormatter()
+    customFormatter.numberStyle = .decimal
+    customFormatter.maximumFractionDigits = 2
+    customFormatter.minimumFractionDigits = 0
+    customFormatter.usesGroupingSeparator = true
+    
+    return customFormatter.string(from: NSNumber(value: value)) ?? "\(value)"
+}
 
 struct Provider: AppIntentTimelineProvider {
     func placeholder(in context: Context) -> SimpleEntry {
@@ -47,77 +58,57 @@ struct ChartPreset {
     var timeSpan: Int
 }
 
-private func chartLine(in geometry: GeometryProxy, chartPreset: ChartPreset) -> Path {
-    var path = Path()
+struct LineChartView: View {
+    var dataPoints: [ProfitDataPoint]
+    var isXAxisVisible = true
     
-    let xScale = geometry.size.width / CGFloat(chartPreset.timeSpan)
-    let yScale = geometry.size.height / CGFloat(chartPreset.maxValue - chartPreset.minValue)
-
-    for (index, dataPoint) in chartPreset.dataPoints.enumerated() {
-        let xPosition = CGFloat(dataPoint.t - chartPreset.firstTimestamp) * xScale
-        let yPosition = geometry.size.height - CGFloat(dataPoint.v - chartPreset.minValue) * yScale
+    var body: some View {
+        var minValue: Int { dataPoints.map { $0.v }.min() ?? 0 }
+        var maxValue: Int { dataPoints.map { $0.v }.max() ?? 0 }
         
-        if index == 0 {
-            path.move(to: CGPoint(x: xPosition, y: yPosition))
-        } else {
-            path.addLine(to: CGPoint(x: xPosition, y: yPosition))
+        let firstItem = dataPoints[0]
+        let lastItem = dataPoints[dataPoints.count - 1]
+        let midPointItem = dataPoints[abs(dataPoints.count / 2)]
+        
+        let btcColor = Color.init(red: 247/255, green: 147/255, blue: 26/255)
+        
+        let adjustedDataPoints = dataPoints.map { ProfitDataPoint(t: $0.t, v: $0.v - minValue) }
+        
+        Chart(adjustedDataPoints) {
+            AreaMark(
+                x: .value("Time", $0.t),
+                y: .value("Value", $0.v)
+            )
+            .foregroundStyle(
+                LinearGradient(gradient: Gradient(colors: [btcColor.opacity(0.4), btcColor.opacity(0)]),
+                               startPoint: .top,
+                               endPoint: .bottom)
+            )
+            LineMark(
+                x: .value("Time", $0.t),
+                y: .value("Value", $0.v)
+            )
+            .foregroundStyle(btcColor)
+            
+        }
+        .chartYScale(domain: [0, maxValue - minValue])
+        .chartYAxis(.hidden)
+        .chartXScale(domain: [dataPoints[0].t, dataPoints[dataPoints.count - 1].t])
+        .chartXAxis {
+            AxisMarks(values: [firstItem.t, lastItem.t, midPointItem.t]) { value in
+                AxisGridLine()
+                if isXAxisVisible {
+                    AxisValueLabel(formatDate(timestamp: value.as(Int.self)!))
+                }
+            }
         }
     }
     
-
-    return path
-}
-func chartFill(in geometry: GeometryProxy, chartPreset: ChartPreset) -> Path {
-    var path = chartLine(in: geometry, chartPreset: chartPreset)
-    
-    // Extend the path to the bottom right corner
-    path.addLine(to: CGPoint(x: geometry.size.width, y: geometry.size.height))
-    // Extend the path to the bottom left corner
-    path.addLine(to: CGPoint(x: 0, y: geometry.size.height))
-
-    // Close the path
-    path.closeSubpath()
-    return path
-}
-
-struct LineChartView: View {
-    var dataPoints: [ProfitDataPoint]
-
-    var body: some View {
-        GeometryReader { geometry in
-            var minValue: Int { dataPoints.map { $0.v }.min() ?? 0 }
-            var maxValue: Int { dataPoints.map { $0.v }.max() ?? 0 }
-            var firstTimestamp: Int { dataPoints.map { $0.t }.min() ?? 0 }
-            var lastTimestamp: Int { dataPoints.map { $0.t }.max() ?? 0 }
-            var timeSpan: Int { (lastTimestamp - firstTimestamp) }
-            let chartPreset = ChartPreset(
-                dataPoints: dataPoints,
-                minValue: minValue,
-                maxValue: maxValue,
-                firstTimestamp: firstTimestamp,
-                lastTimestamp: lastTimestamp,
-                timeSpan: timeSpan
-            )
-            
-            let linePath = chartLine(in: geometry, chartPreset: chartPreset)
-            let fillPath = chartFill(in: geometry, chartPreset: chartPreset)
-            
-            let btcColor = Color.init(red: 247/255, green: 147/255, blue: 26/255, opacity: 1)
-            let btcColorGradientStart = Color.init(red: 247/255, green: 147/255, blue: 26/255, opacity: 0.25)
-            let btcColorGradientEnd = Color.init(red: 247/255, green: 147/255, blue: 26/255, opacity: 0)
-            
-            linePath.stroke(
-                Color.init(red: 247/255, green: 147/255, blue: 26/255, opacity: 1),
-                style: StrokeStyle(lineWidth: 2)
-            )
-            fillPath.fill(
-                LinearGradient(
-                    gradient: Gradient(colors: [btcColorGradientStart, btcColorGradientEnd]),
-                    startPoint: .top,
-                    endPoint: .bottom
-                )
-            )
-        }
+    func formatDate(timestamp: Int) -> String {
+        let date = Date(timeIntervalSince1970: TimeInterval(timestamp))
+        let formatter = DateFormatter()
+        formatter.dateFormat = "MMM yyyy"
+        return formatter.string(from: date)
     }
 }
 
@@ -134,22 +125,53 @@ struct MetricWidgetCurrentValue : View {
         Text("\(currentValue)")
             .fontWeight(.medium)
             .font(.largeTitle)
+            .minimumScaleFactor(0.01)
+    }
+}
+struct MetricWidgetDeltaValue : View {
+    var firstValue: Int
+    var lastValue: Int
+    var body : some View {
+        let deltaValue = lastValue - firstValue
+        let deltaPercent = String(format: "%.2f", (100.0 / Double(firstValue)) * Double(deltaValue))
+        let arrow = deltaValue > 0 ? "▲" : "▼"
+        let symbol = deltaValue > 0 ? "+" : "-"
+        let color = deltaValue > 0 ? Color.green : Color.red
+        let backgroundColor = color.opacity(0.1)
+        
+        HStack {
+            VStack {
+                Text("\(arrow) \(symbol)\(deltaValue)")
+                    .font(.footnote)
+                    .fontWeight(.medium)
+                    .foregroundStyle(color)
+                    .padding(.horizontal, 4)
+                    .padding(.vertical, 2)
+            }.background(backgroundColor).cornerRadius(/*@START_MENU_TOKEN@*/3.0/*@END_MENU_TOKEN@*/)
+            
+            Text("\(symbol)\(deltaPercent)%")
+                .font(.footnote)
+                .fontWeight(.medium)
+                .foregroundStyle(color)
+                .padding(.horizontal, 4)
+                .padding(.vertical, 2)
+        }
     }
 }
 struct MetricWidgetDataRow : View {
     var label: String
-    var value: String
+    var value: Int
     var body: some View {
         HStack {
             Text(label)
                 .opacity(0.5)
                 .fontWeight(.medium)
-                .font(.callout)
+                .font(.footnote)
             Spacer()
-            Text(value)
+            Text(formatNumber(value: value))
                 .opacity(0.5)
                 .fontWeight(.medium)
-                .font(.callout)
+                .font(.footnote)
         }
     }
 }
@@ -159,6 +181,8 @@ struct StructuredData {
     var currentValue: Int
     var minValue: Int
     var maxValue: Int
+    var firstValue: Int
+    var lastValue: Int
 }
 
 struct Metric_WidgetEntryView : View {
@@ -173,11 +197,13 @@ struct Metric_WidgetEntryView : View {
                 var minValue: Int { dataPoints.map { $0.v }.min() ?? 0 }
                 var maxValue: Int { dataPoints.map { $0.v }.max() ?? 0 }
                 
-                var structuredData = StructuredData(
+                let structuredData = StructuredData(
                     dataPoints: dataPoints,
                     currentValue: currentValue.v,
                     minValue: minValue,
-                    maxValue: maxValue
+                    maxValue: maxValue,
+                    firstValue: dataPoints[0].v,
+                    lastValue: dataPoints[dataPoints.count - 1].v
                 )
                 
                 switch entry.family {
@@ -227,7 +253,7 @@ struct Metric_WidgetEntryView : View {
     private func smallLayoutView(data: StructuredData) -> some View {
         VStack(alignment: .leading) {
             MetricWidgetTitle()
-            LineChartView(dataPoints: data.dataPoints)
+            LineChartView(dataPoints: data.dataPoints, isXAxisVisible: false)
             MetricWidgetCurrentValue(currentValue: data.currentValue)
         }
     }
@@ -238,12 +264,12 @@ struct Metric_WidgetEntryView : View {
             HStack(spacing: 24) {
                 VStack(alignment: .leading, spacing: 8) {
                     MetricWidgetCurrentValue(currentValue: data.currentValue)
+                    MetricWidgetDeltaValue(firstValue: data.firstValue, lastValue: data.lastValue)
                     Spacer()
-                    MetricWidgetDataRow(label: "High", value: "\(data.maxValue)")
-                    MetricWidgetDataRow(label: "Low", value: "\(data.minValue)")
+                    MetricWidgetDataRow(label: "High", value: data.maxValue)
+                    MetricWidgetDataRow(label: "Low", value: data.minValue)
                 }
                 LineChartView(dataPoints: data.dataPoints)
-                    .padding(8)
             }
         }
     }
@@ -251,19 +277,17 @@ struct Metric_WidgetEntryView : View {
     private func largeLayoutView(data: StructuredData) -> some View {
         VStack(alignment: .leading, spacing: 16) {
             MetricWidgetTitle()
-            Divider()
             VStack(spacing: 16) {
-                VStack(spacing: 8) {
-                    MetricWidgetDataRow(label: "High", value: "\(data.maxValue)")
-                    MetricWidgetDataRow(label: "Low", value: "\(data.minValue)")
-                }
-                Divider()
                 HStack {
-                    Spacer()
                     MetricWidgetCurrentValue(currentValue: data.currentValue)
+                    Spacer()
+                    MetricWidgetDeltaValue(firstValue: data.firstValue, lastValue: data.lastValue)
                 }
                 LineChartView(dataPoints: data.dataPoints)
-                    .padding(8)
+                VStack(spacing: 8) {
+                    MetricWidgetDataRow(label: "High", value: data.maxValue)
+                    MetricWidgetDataRow(label: "Low", value: data.minValue)
+                }
             }
         }
     }
