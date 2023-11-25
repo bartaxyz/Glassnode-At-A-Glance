@@ -12,7 +12,7 @@
 	<true/>
 	<key>keychain-access-groups</key>
 	<array>
-		<string>$(AppIdentifierPrefix)com.bartaxyz.Glassnode-At-A-Glance.keychain</string>
+		<string>$(AppIdentifierPrefix)com.bartaxyz.GlassnodeAtAGlance.keychain</string>
 	</array>
 </dict>
 </plist>

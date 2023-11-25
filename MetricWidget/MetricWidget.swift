@@ -1,5 +1,5 @@
 //
-//  Metric_Widget.swift
+//  MetricWidget.swift
 //  Metric Widget
 //
 //  Created by Ondrej Barta on 17.11.23.
@@ -185,7 +185,7 @@ struct StructuredData {
     var lastValue: Int
 }
 
-struct Metric_WidgetEntryView : View {
+struct MetricWidgetEntryView : View {
     var entry: Provider.Entry
     let profitData: ProfitData? = loadProfitData()
     @State var apiKey = KeychainStore.shared.getApiKey()
@@ -228,14 +228,14 @@ struct Metric_WidgetEntryView : View {
                     Text("Favorite Emojissssss:")
                     Text(entry.configuration.favoriteEmoji)
                     
-                    Link(destination: URL(string: "glassnode-at-a-glance://addapikey")!) {
+                    Link(destination: URL(string: "GlassnodeAtAGlance://addapikey")!) {
                         Text("Tap to add API Key")
                     }
                     
                     Text("\(apiKey)")
                 }
             } else {
-                Link(destination: URL(string: "glassnode-at-a-glance://addapikey")!) {
+                Link(destination: URL(string: "GlassnodeAtAGlance://addapikey")!) {
                     Text("Tap to add API Key")
                 }
             } */
@@ -293,12 +293,12 @@ struct Metric_WidgetEntryView : View {
     }
 }
 
-struct Metric_Widget: Widget {
-    let kind: String = "Metric_Widget"
+struct MetricWidget: Widget {
+    let kind: String = "MetricWidget"
 
     var body: some WidgetConfiguration {
         AppIntentConfiguration(kind: kind, intent: ConfigurationAppIntent.self, provider: Provider()) { entry in
-            Metric_WidgetEntryView(entry: entry)
+            MetricWidgetEntryView(entry: entry)
                 .containerBackground(.fill.tertiary, for: .widget)
         }
     }

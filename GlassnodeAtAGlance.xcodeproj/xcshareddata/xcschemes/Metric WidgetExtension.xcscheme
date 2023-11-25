@@ -16,9 +16,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "4A8229742B07F38F00AB611D"
-               BuildableName = "Metric WidgetExtension.appex"
-               BlueprintName = "Metric WidgetExtension"
-               ReferencedContainer = "container:Glassnode At A Glance.xcodeproj">
+               BuildableName = "MetricWidgetExtension.appex"
+               BlueprintName = "MetricWidgetExtension"
+               ReferencedContainer = "container:GlassnodeAtAGlance.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -30,9 +30,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "4A8229242B07A34A00AB611D"
-               BuildableName = "Glassnode At A Glance.app"
-               BlueprintName = "Glassnode At A Glance"
-               ReferencedContainer = "container:Glassnode At A Glance.xcodeproj">
+               BuildableName = "GlassnodeAtAGlance.app"
+               BlueprintName = "GlassnodeAtAGlance"
+               ReferencedContainer = "container:GlassnodeAtAGlance.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -63,18 +63,18 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4A8229742B07F38F00AB611D"
-            BuildableName = "Metric WidgetExtension.appex"
-            BlueprintName = "Metric WidgetExtension"
-            ReferencedContainer = "container:Glassnode At A Glance.xcodeproj">
+            BuildableName = "MetricWidgetExtension.appex"
+            BlueprintName = "MetricWidgetExtension"
+            ReferencedContainer = "container:GlassnodeAtAGlance.xcodeproj">
          </BuildableReference>
       </RemoteRunnable>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4A8229242B07A34A00AB611D"
-            BuildableName = "Glassnode At A Glance.app"
-            BlueprintName = "Glassnode At A Glance"
-            ReferencedContainer = "container:Glassnode At A Glance.xcodeproj">
+            BuildableName = "GlassnodeAtAGlance.app"
+            BlueprintName = "GlassnodeAtAGlance"
+            ReferencedContainer = "container:GlassnodeAtAGlance.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <EnvironmentVariables>
@@ -108,9 +108,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4A8229242B07A34A00AB611D"
-            BuildableName = "Glassnode At A Glance.app"
-            BlueprintName = "Glassnode At A Glance"
-            ReferencedContainer = "container:Glassnode At A Glance.xcodeproj">
+            BuildableName = "GlassnodeAtAGlance.app"
+            BlueprintName = "GlassnodeAtAGlance"
+            ReferencedContainer = "container:GlassnodeAtAGlance.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

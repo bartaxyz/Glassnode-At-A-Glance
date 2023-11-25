@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
    LastUpgradeVersion = "1500"
-   version = "1.7">
+   version = "2.2">
    <BuildAction
       parallelizeBuildables = "YES"
       buildImplicitDependencies = "YES">
@@ -15,10 +15,19 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "4A8229242B07A34A00AB611D"
-               BuildableName = "Glassnode At A Glance.app"
-               BlueprintName = "Glassnode At A Glance"
-               ReferencedContainer = "container:Glassnode At A Glance.xcodeproj">
+               BuildableName = "GlassnodeAtAGlance.app"
+               BlueprintName = "GlassnodeAtAGlance"
+               ReferencedContainer = "container:GlassnodeAtAGlance.xcodeproj">
             </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <AutocreatedTestPlanReference>
+            </AutocreatedTestPlanReference>
          </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
@@ -44,9 +53,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4A8229242B07A34A00AB611D"
-            BuildableName = "Glassnode At A Glance.app"
-            BlueprintName = "Glassnode At A Glance"
-            ReferencedContainer = "container:Glassnode At A Glance.xcodeproj">
+            BuildableName = "GlassnodeAtAGlance.app"
+            BlueprintName = "GlassnodeAtAGlance"
+            ReferencedContainer = "container:GlassnodeAtAGlance.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -61,9 +70,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4A8229242B07A34A00AB611D"
-            BuildableName = "Glassnode At A Glance.app"
-            BlueprintName = "Glassnode At A Glance"
-            ReferencedContainer = "container:Glassnode At A Glance.xcodeproj">
+            BuildableName = "GlassnodeAtAGlance.app"
+            BlueprintName = "GlassnodeAtAGlance"
+            ReferencedContainer = "container:GlassnodeAtAGlance.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

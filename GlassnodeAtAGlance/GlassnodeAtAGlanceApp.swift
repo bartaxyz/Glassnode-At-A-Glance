@@ -1,5 +1,5 @@
 //
-//  Glassnode_At_A_GlanceApp.swift
+//  GlassnodeAtAGlanceAppApp.swift
 //  Glassnode At A Glance
 //
 //  Created by Ondrej Barta on 17.11.23.
@@ -7,8 +7,7 @@
 
 import SwiftUI
 
-@main
-struct Glassnode_At_A_GlanceApp: App {
+struct GlassnodeAtAGlanceApp: App {
     var width = CGFloat(400)
     var height = CGFloat(160)
     

@@ -17,7 +17,7 @@ struct KeychainStore {
     }
     
     private init() {
-        keychainSwift.accessGroup = "com.bartaxyz.Glassnode-At-A-Glance.keychain"
+        keychainSwift.accessGroup = "com.bartaxyz.GlassnodeAtAGlance.keychain"
     }
     
     func setApiKey(_ apiKey: String?) {
