@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+@main
 struct GlassnodeAtAGlanceApp: App {
     var width = CGFloat(400)
     var height = CGFloat(160)

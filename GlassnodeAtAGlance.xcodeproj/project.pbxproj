@@ -7,14 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4A136A722B097B2E001AA82A /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 4A136A712B097B2E001AA82A /* KeychainSwift */; };
-		4A24426D2B12475000EBCCDC /* MetricWidget in Resources */ = {isa = PBXBuildFile; fileRef = 4A2442612B123E8900EBCCDC /* MetricWidget */; };
 		4A24426F2B12475A00EBCCDC /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A82293F2B07A39D00AB611D /* SwiftUI.framework */; };
-		4A2442702B124E3B00EBCCDC /* GlassnodeAtAGlance in Resources */ = {isa = PBXBuildFile; fileRef = 4A2442632B123E8900EBCCDC /* GlassnodeAtAGlance */; };
+		4A4E86922B1261B000F657CA /* GlassnodeAtAGlanceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4E86892B1261B000F657CA /* GlassnodeAtAGlanceApp.swift */; };
+		4A4E86932B1261B000F657CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A4E868A2B1261B000F657CA /* Assets.xcassets */; };
+		4A4E86942B1261B000F657CA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A4E868C2B1261B000F657CA /* Preview Assets.xcassets */; };
+		4A4E86952B1261B000F657CA /* MainWindowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4E868E2B1261B000F657CA /* MainWindowView.swift */; };
+		4A4E86962B1261B000F657CA /* KeychainStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4E86902B1261B000F657CA /* KeychainStore.swift */; };
+		4A4E86972B1261B000F657CA /* SharedDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4E86912B1261B000F657CA /* SharedDefaults.swift */; };
+		4A4E86A72B1261C000F657CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A4E869A2B1261C000F657CA /* Assets.xcassets */; };
+		4A4E86AF2B1261C800F657CA /* MetricWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4E86992B1261C000F657CA /* MetricWidgetBundle.swift */; };
+		4A4E86B02B1261CB00F657CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A4E869A2B1261C000F657CA /* Assets.xcassets */; };
+		4A4E86B12B1261CD00F657CA /* AppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4E869B2B1261C000F657CA /* AppIntent.swift */; };
+		4A4E86B22B1261D100F657CA /* MetricService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4E869D2B1261C000F657CA /* MetricService.swift */; };
+		4A4E86B32B1261D500F657CA /* MetricWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4E86A42B1261C000F657CA /* MetricWidget.swift */; };
+		4A4E86B52B1261DD00F657CA /* ProfitCountDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4E86A22B1261C000F657CA /* ProfitCountDataModel.swift */; };
+		4A4E86B62B1261DD00F657CA /* profit_count.json in Resources */ = {isa = PBXBuildFile; fileRef = 4A4E86A32B1261C000F657CA /* profit_count.json */; };
+		4A4E86B82B12620B00F657CA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4E86B72B12620B00F657CA /* ContentView.swift */; };
+		4A4E86BD2B12623700F657CA /* KeychainStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4E86902B1261B000F657CA /* KeychainStore.swift */; };
+		4A4E86BE2B12623900F657CA /* SharedDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4E86912B1261B000F657CA /* SharedDefaults.swift */; };
+		4A4E86C32B12630400F657CA /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 4A4E86C22B12630400F657CA /* KeychainSwift */; };
+		4A4E86C52B12630A00F657CA /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 4A4E86C42B12630A00F657CA /* KeychainSwift */; };
 		4A8229762B07F38F00AB611D /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A82293D2B07A39D00AB611D /* WidgetKit.framework */; };
 		4A8229772B07F38F00AB611D /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A82293F2B07A39D00AB611D /* SwiftUI.framework */; };
 		4A8229852B07F39000AB611D /* MetricWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 4A8229752B07F38F00AB611D /* MetricWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		4ACA83172B12579800D17A96 /* MetricWidget in Resources */ = {isa = PBXBuildFile; fileRef = 4A2442612B123E8900EBCCDC /* MetricWidget */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,9 +57,24 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		4A2442602B123E8900EBCCDC /* GlassnodeAtAGlance-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GlassnodeAtAGlance-Info.plist"; sourceTree = "<group>"; };
-		4A2442612B123E8900EBCCDC /* MetricWidget */ = {isa = PBXFileReference; lastKnownFileType = folder; path = MetricWidget; sourceTree = "<group>"; };
-		4A2442632B123E8900EBCCDC /* GlassnodeAtAGlance */ = {isa = PBXFileReference; lastKnownFileType = folder; path = GlassnodeAtAGlance; sourceTree = "<group>"; };
+		4A4E867D2B125FFE00F657CA /* GlassnodeAtAGlance-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GlassnodeAtAGlance-Info.plist"; sourceTree = "<group>"; };
+		4A4E86892B1261B000F657CA /* GlassnodeAtAGlanceApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlassnodeAtAGlanceApp.swift; sourceTree = "<group>"; };
+		4A4E868A2B1261B000F657CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4A4E868C2B1261B000F657CA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4A4E868D2B1261B000F657CA /* GlassnodeAtAGlance.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = GlassnodeAtAGlance.entitlements; sourceTree = "<group>"; };
+		4A4E868E2B1261B000F657CA /* MainWindowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainWindowView.swift; sourceTree = "<group>"; };
+		4A4E86902B1261B000F657CA /* KeychainStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainStore.swift; sourceTree = "<group>"; };
+		4A4E86912B1261B000F657CA /* SharedDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharedDefaults.swift; sourceTree = "<group>"; };
+		4A4E86992B1261C000F657CA /* MetricWidgetBundle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetricWidgetBundle.swift; sourceTree = "<group>"; };
+		4A4E869A2B1261C000F657CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4A4E869B2B1261C000F657CA /* AppIntent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppIntent.swift; sourceTree = "<group>"; };
+		4A4E869D2B1261C000F657CA /* MetricService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetricService.swift; sourceTree = "<group>"; };
+		4A4E869E2B1261C000F657CA /* MetricWidget.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = MetricWidget.entitlements; sourceTree = "<group>"; };
+		4A4E86A22B1261C000F657CA /* ProfitCountDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfitCountDataModel.swift; sourceTree = "<group>"; };
+		4A4E86A32B1261C000F657CA /* profit_count.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = profit_count.json; sourceTree = "<group>"; };
+		4A4E86A42B1261C000F657CA /* MetricWidget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetricWidget.swift; sourceTree = "<group>"; };
+		4A4E86A52B1261C000F657CA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4A4E86B72B12620B00F657CA /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4A8229252B07A34A00AB611D /* GlassnodeAtAGlance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GlassnodeAtAGlance.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A82293D2B07A39D00AB611D /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		4A82293F2B07A39D00AB611D /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
@@ -56,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A4E86C32B12630400F657CA /* KeychainSwift in Frameworks */,
 				4A24426F2B12475A00EBCCDC /* SwiftUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -64,7 +95,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4A136A722B097B2E001AA82A /* KeychainSwift in Frameworks */,
+				4A4E86C52B12630A00F657CA /* KeychainSwift in Frameworks */,
 				4A8229772B07F38F00AB611D /* SwiftUI.framework in Frameworks */,
 				4A8229762B07F38F00AB611D /* WidgetKit.framework in Frameworks */,
 			);
@@ -73,12 +104,83 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4A4E86882B1261B000F657CA /* GlassnodeAtAGlance */ = {
+			isa = PBXGroup;
+			children = (
+				4A4E86B72B12620B00F657CA /* ContentView.swift */,
+				4A4E86892B1261B000F657CA /* GlassnodeAtAGlanceApp.swift */,
+				4A4E868A2B1261B000F657CA /* Assets.xcassets */,
+				4A4E868B2B1261B000F657CA /* Preview Content */,
+				4A4E868D2B1261B000F657CA /* GlassnodeAtAGlance.entitlements */,
+				4A4E868E2B1261B000F657CA /* MainWindowView.swift */,
+				4A4E868F2B1261B000F657CA /* SharedDefaults */,
+			);
+			path = GlassnodeAtAGlance;
+			sourceTree = "<group>";
+		};
+		4A4E868B2B1261B000F657CA /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				4A4E868C2B1261B000F657CA /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		4A4E868F2B1261B000F657CA /* SharedDefaults */ = {
+			isa = PBXGroup;
+			children = (
+				4A4E86902B1261B000F657CA /* KeychainStore.swift */,
+				4A4E86912B1261B000F657CA /* SharedDefaults.swift */,
+			);
+			path = SharedDefaults;
+			sourceTree = "<group>";
+		};
+		4A4E86982B1261C000F657CA /* MetricWidget */ = {
+			isa = PBXGroup;
+			children = (
+				4A4E86992B1261C000F657CA /* MetricWidgetBundle.swift */,
+				4A4E869A2B1261C000F657CA /* Assets.xcassets */,
+				4A4E869B2B1261C000F657CA /* AppIntent.swift */,
+				4A4E869C2B1261C000F657CA /* DataService */,
+				4A4E869E2B1261C000F657CA /* MetricWidget.entitlements */,
+				4A4E86A02B1261C000F657CA /* PreviewData */,
+				4A4E86A42B1261C000F657CA /* MetricWidget.swift */,
+				4A4E86A52B1261C000F657CA /* Info.plist */,
+			);
+			path = MetricWidget;
+			sourceTree = "<group>";
+		};
+		4A4E869C2B1261C000F657CA /* DataService */ = {
+			isa = PBXGroup;
+			children = (
+				4A4E869D2B1261C000F657CA /* MetricService.swift */,
+			);
+			path = DataService;
+			sourceTree = "<group>";
+		};
+		4A4E86A02B1261C000F657CA /* PreviewData */ = {
+			isa = PBXGroup;
+			children = (
+				4A4E86A12B1261C000F657CA /* ProfitCount */,
+			);
+			path = PreviewData;
+			sourceTree = "<group>";
+		};
+		4A4E86A12B1261C000F657CA /* ProfitCount */ = {
+			isa = PBXGroup;
+			children = (
+				4A4E86A22B1261C000F657CA /* ProfitCountDataModel.swift */,
+				4A4E86A32B1261C000F657CA /* profit_count.json */,
+			);
+			path = ProfitCount;
+			sourceTree = "<group>";
+		};
 		4A82291C2B07A34900AB611D = {
 			isa = PBXGroup;
 			children = (
-				4A2442632B123E8900EBCCDC /* GlassnodeAtAGlance */,
-				4A2442602B123E8900EBCCDC /* GlassnodeAtAGlance-Info.plist */,
-				4A2442612B123E8900EBCCDC /* MetricWidget */,
+				4A4E86882B1261B000F657CA /* GlassnodeAtAGlance */,
+				4A4E867D2B125FFE00F657CA /* GlassnodeAtAGlance-Info.plist */,
+				4A4E86982B1261C000F657CA /* MetricWidget */,
 				4A82293C2B07A39D00AB611D /* Frameworks */,
 				4A8229262B07A34A00AB611D /* Products */,
 			);
@@ -121,6 +223,7 @@
 			);
 			name = GlassnodeAtAGlance;
 			packageProductDependencies = (
+				4A4E86C22B12630400F657CA /* KeychainSwift */,
 			);
 			productName = GlassnodeAtAGlance;
 			productReference = 4A8229252B07A34A00AB611D /* GlassnodeAtAGlance.app */;
@@ -140,7 +243,7 @@
 			);
 			name = MetricWidgetExtension;
 			packageProductDependencies = (
-				4A136A712B097B2E001AA82A /* KeychainSwift */,
+				4A4E86C42B12630A00F657CA /* KeychainSwift */,
 			);
 			productName = MetricWidgetExtension;
 			productReference = 4A8229752B07F38F00AB611D /* MetricWidgetExtension.appex */;
@@ -158,6 +261,7 @@
 				TargetAttributes = {
 					4A8229242B07A34A00AB611D = {
 						CreatedOnToolsVersion = 15.0;
+						LastSwiftMigration = 1500;
 					};
 					4A8229742B07F38F00AB611D = {
 						CreatedOnToolsVersion = 15.0;
@@ -174,7 +278,7 @@
 			);
 			mainGroup = 4A82291C2B07A34900AB611D;
 			packageReferences = (
-				4ADCE0DB2B097869001A32D9 /* XCRemoteSwiftPackageReference "keychain-swift" */,
+				4A4E86BF2B1262D500F657CA /* XCRemoteSwiftPackageReference "keychain-swift" */,
 			);
 			productRefGroup = 4A8229262B07A34A00AB611D /* Products */;
 			projectDirPath = "";
@@ -191,8 +295,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4ACA83172B12579800D17A96 /* MetricWidget in Resources */,
-				4A2442702B124E3B00EBCCDC /* GlassnodeAtAGlance in Resources */,
+				4A4E86932B1261B000F657CA /* Assets.xcassets in Resources */,
+				4A4E86A72B1261C000F657CA /* Assets.xcassets in Resources */,
+				4A4E86942B1261B000F657CA /* Preview Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,7 +305,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4A24426D2B12475000EBCCDC /* MetricWidget in Resources */,
+				4A4E86B02B1261CB00F657CA /* Assets.xcassets in Resources */,
+				4A4E86B62B1261DD00F657CA /* profit_count.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,6 +317,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A4E86962B1261B000F657CA /* KeychainStore.swift in Sources */,
+				4A4E86922B1261B000F657CA /* GlassnodeAtAGlanceApp.swift in Sources */,
+				4A4E86972B1261B000F657CA /* SharedDefaults.swift in Sources */,
+				4A4E86B82B12620B00F657CA /* ContentView.swift in Sources */,
+				4A4E86952B1261B000F657CA /* MainWindowView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,6 +329,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A4E86B22B1261D100F657CA /* MetricService.swift in Sources */,
+				4A4E86B32B1261D500F657CA /* MetricWidget.swift in Sources */,
+				4A4E86B52B1261DD00F657CA /* ProfitCountDataModel.swift in Sources */,
+				4A4E86AF2B1261C800F657CA /* MetricWidgetBundle.swift in Sources */,
+				4A4E86BD2B12623700F657CA /* KeychainStore.swift in Sources */,
+				4A4E86B12B1261CD00F657CA /* AppIntent.swift in Sources */,
+				4A4E86BE2B12623900F657CA /* SharedDefaults.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,9 +469,11 @@
 		4A8229352B07A34B00AB611D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = GlassnodeAtAGlance/GlassnodeAtAGlance.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
@@ -386,6 +506,8 @@
 				SUPPORTED_PLATFORMS = macosx;
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "GlassnodeAtAGlance-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -393,9 +515,11 @@
 		4A8229362B07A34B00AB611D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = GlassnodeAtAGlance/GlassnodeAtAGlance.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
@@ -428,6 +552,7 @@
 				SUPPORTED_PLATFORMS = macosx;
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "GlassnodeAtAGlance-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
@@ -527,7 +652,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		4ADCE0DB2B097869001A32D9 /* XCRemoteSwiftPackageReference "keychain-swift" */ = {
+		4A4E86BF2B1262D500F657CA /* XCRemoteSwiftPackageReference "keychain-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/evgenyneu/keychain-swift.git";
 			requirement = {
@@ -538,9 +663,14 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		4A136A712B097B2E001AA82A /* KeychainSwift */ = {
+		4A4E86C22B12630400F657CA /* KeychainSwift */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 4ADCE0DB2B097869001A32D9 /* XCRemoteSwiftPackageReference "keychain-swift" */;
+			package = 4A4E86BF2B1262D500F657CA /* XCRemoteSwiftPackageReference "keychain-swift" */;
+			productName = KeychainSwift;
+		};
+		4A4E86C42B12630A00F657CA /* KeychainSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4A4E86BF2B1262D500F657CA /* XCRemoteSwiftPackageReference "keychain-swift" */;
 			productName = KeychainSwift;
 		};
 /* End XCSwiftPackageProductDependency section */

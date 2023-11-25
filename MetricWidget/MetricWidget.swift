@@ -245,7 +245,7 @@ struct MetricWidgetEntryView : View {
             apiKey = KeychainStore.shared.getApiKey()
             // print("apiKey is ", apiKey ?? "nil")
             
-            print(profitData)
+            print(profitData as Any)
         }
     }
     
