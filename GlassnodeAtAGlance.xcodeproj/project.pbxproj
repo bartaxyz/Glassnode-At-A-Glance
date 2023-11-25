@@ -3,20 +3,18 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 60;
+	objectVersion = 56;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		4A136A722B097B2E001AA82A /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 4A136A712B097B2E001AA82A /* KeychainSwift */; };
-		4A24426A2B12459B00EBCCDC /* GlassnodeSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 4A2442692B12459B00EBCCDC /* GlassnodeSwift */; };
-		4A24426C2B12467700EBCCDC /* GlassnodeSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 4A24426B2B12467700EBCCDC /* GlassnodeSwift */; };
 		4A24426D2B12475000EBCCDC /* MetricWidget in Resources */ = {isa = PBXBuildFile; fileRef = 4A2442612B123E8900EBCCDC /* MetricWidget */; };
-		4A24426E2B12475200EBCCDC /* MetricWidget in Resources */ = {isa = PBXBuildFile; fileRef = 4A2442612B123E8900EBCCDC /* MetricWidget */; };
 		4A24426F2B12475A00EBCCDC /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A82293F2B07A39D00AB611D /* SwiftUI.framework */; };
 		4A2442702B124E3B00EBCCDC /* GlassnodeAtAGlance in Resources */ = {isa = PBXBuildFile; fileRef = 4A2442632B123E8900EBCCDC /* GlassnodeAtAGlance */; };
 		4A8229762B07F38F00AB611D /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A82293D2B07A39D00AB611D /* WidgetKit.framework */; };
 		4A8229772B07F38F00AB611D /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A82293F2B07A39D00AB611D /* SwiftUI.framework */; };
 		4A8229852B07F39000AB611D /* MetricWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 4A8229752B07F38F00AB611D /* MetricWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		4ACA83172B12579800D17A96 /* MetricWidget in Resources */ = {isa = PBXBuildFile; fileRef = 4A2442612B123E8900EBCCDC /* MetricWidget */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,9 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4A24426A2B12459B00EBCCDC /* GlassnodeSwift in Frameworks */,
 				4A24426F2B12475A00EBCCDC /* SwiftUI.framework in Frameworks */,
-				4A24426C2B12467700EBCCDC /* GlassnodeSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,8 +121,6 @@
 			);
 			name = GlassnodeAtAGlance;
 			packageProductDependencies = (
-				4A2442692B12459B00EBCCDC /* GlassnodeSwift */,
-				4A24426B2B12467700EBCCDC /* GlassnodeSwift */,
 			);
 			productName = GlassnodeAtAGlance;
 			productReference = 4A8229252B07A34A00AB611D /* GlassnodeAtAGlance.app */;
@@ -181,7 +175,6 @@
 			mainGroup = 4A82291C2B07A34900AB611D;
 			packageReferences = (
 				4ADCE0DB2B097869001A32D9 /* XCRemoteSwiftPackageReference "keychain-swift" */,
-				4A2442682B12459B00EBCCDC /* XCLocalSwiftPackageReference "../glassnode-swift" */,
 			);
 			productRefGroup = 4A8229262B07A34A00AB611D /* Products */;
 			projectDirPath = "";
@@ -198,8 +191,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4ACA83172B12579800D17A96 /* MetricWidget in Resources */,
 				4A2442702B124E3B00EBCCDC /* GlassnodeAtAGlance in Resources */,
-				4A24426E2B12475200EBCCDC /* MetricWidget in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,6 +270,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				EXCLUDED_ARCHS = "";
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -292,7 +286,6 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -339,6 +332,7 @@
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				EXCLUDED_ARCHS = "";
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -348,7 +342,6 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -385,7 +378,6 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bartaxyz.GlassnodeAtAGlance;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -428,7 +420,6 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bartaxyz.GlassnodeAtAGlance;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -461,9 +452,8 @@
 					"@executable_path/../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.bartaxyz.GlassnodeAtAGlance.Metric-Widget";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bartaxyz.GlassnodeAtAGlance.MetricWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
@@ -493,9 +483,8 @@
 					"@executable_path/../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.bartaxyz.GlassnodeAtAGlance.Metric-Widget";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bartaxyz.GlassnodeAtAGlance.MetricWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
@@ -537,13 +526,6 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCLocalSwiftPackageReference section */
-		4A2442682B12459B00EBCCDC /* XCLocalSwiftPackageReference "../glassnode-swift" */ = {
-			isa = XCLocalSwiftPackageReference;
-			relativePath = "../glassnode-swift";
-		};
-/* End XCLocalSwiftPackageReference section */
-
 /* Begin XCRemoteSwiftPackageReference section */
 		4ADCE0DB2B097869001A32D9 /* XCRemoteSwiftPackageReference "keychain-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
@@ -560,14 +542,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 4ADCE0DB2B097869001A32D9 /* XCRemoteSwiftPackageReference "keychain-swift" */;
 			productName = KeychainSwift;
-		};
-		4A2442692B12459B00EBCCDC /* GlassnodeSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = GlassnodeSwift;
-		};
-		4A24426B2B12467700EBCCDC /* GlassnodeSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = GlassnodeSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

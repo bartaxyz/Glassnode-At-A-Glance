@@ -11,7 +11,7 @@
 			<string>com.bartaxyz.GlassnodeAtAGlance</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>GlassnodeAtAGlance</string>
+				<string>glassnode-at-a-glance</string>
 			</array>
 		</dict>
 	</array>
