@@ -9,7 +9,7 @@ import Foundation
 
 struct ProfitDataPoint: Codable, Identifiable {
     let t: Int
-    let v: Int
+    let v: Double
     var id: Int { t }
 }
 

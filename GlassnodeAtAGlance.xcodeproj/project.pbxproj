@@ -3,10 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A208F672B13637500F680EB /* MetricAssetAppEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A208F662B13637500F680EB /* MetricAssetAppEntity.swift */; };
+		4A208F682B13637500F680EB /* MetricAssetAppEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A208F662B13637500F680EB /* MetricAssetAppEntity.swift */; };
+		4A208F6A2B1364E600F680EB /* MetricAppEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A208F692B1364E600F680EB /* MetricAppEntity.swift */; };
+		4A208F6B2B1364E600F680EB /* MetricAppEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A208F692B1364E600F680EB /* MetricAppEntity.swift */; };
 		4A24426F2B12475A00EBCCDC /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A82293F2B07A39D00AB611D /* SwiftUI.framework */; };
 		4A4E86922B1261B000F657CA /* GlassnodeAtAGlanceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4E86892B1261B000F657CA /* GlassnodeAtAGlanceApp.swift */; };
 		4A4E86932B1261B000F657CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A4E868A2B1261B000F657CA /* Assets.xcassets */; };
@@ -27,6 +31,22 @@
 		4A4E86BE2B12623900F657CA /* SharedDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4E86912B1261B000F657CA /* SharedDefaults.swift */; };
 		4A4E86C32B12630400F657CA /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 4A4E86C22B12630400F657CA /* KeychainSwift */; };
 		4A4E86C52B12630A00F657CA /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 4A4E86C42B12630A00F657CA /* KeychainSwift */; };
+		4A4E86CA2B12942A00F657CA /* LineChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4E86C92B12942A00F657CA /* LineChartView.swift */; };
+		4A4E86CB2B12947400F657CA /* LineChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4E86C92B12942A00F657CA /* LineChartView.swift */; };
+		4A4E86CD2B12949800F657CA /* MetricWidgetTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4E86CC2B12949800F657CA /* MetricWidgetTitle.swift */; };
+		4A4E86CF2B1294AC00F657CA /* MetricWidgetCurrentValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4E86CE2B1294AC00F657CA /* MetricWidgetCurrentValue.swift */; };
+		4A4E86D12B1294C800F657CA /* MetricWidgetDeltaValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4E86D02B1294C800F657CA /* MetricWidgetDeltaValue.swift */; };
+		4A4E86D32B1294E500F657CA /* MetricWidgetDataRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4E86D22B1294E500F657CA /* MetricWidgetDataRow.swift */; };
+		4A4E86D42B1294FE00F657CA /* MetricWidgetTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4E86CC2B12949800F657CA /* MetricWidgetTitle.swift */; };
+		4A4E86D52B1294FE00F657CA /* MetricWidgetCurrentValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4E86CE2B1294AC00F657CA /* MetricWidgetCurrentValue.swift */; };
+		4A4E86D62B1294FE00F657CA /* MetricWidgetDeltaValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4E86D02B1294C800F657CA /* MetricWidgetDeltaValue.swift */; };
+		4A4E86D72B1294FE00F657CA /* MetricWidgetDataRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4E86D22B1294E500F657CA /* MetricWidgetDataRow.swift */; };
+		4A4E86DA2B12951500F657CA /* Format.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4E86D92B12951500F657CA /* Format.swift */; };
+		4A4E86DB2B12952D00F657CA /* Format.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4E86D92B12951500F657CA /* Format.swift */; };
+		4A4E86DC2B12A1CF00F657CA /* ProfitCountDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4E86A22B1261C000F657CA /* ProfitCountDataModel.swift */; };
+		4A4E86DF2B12B75B00F657CA /* GlassnodeSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 4A4E86DE2B12B75B00F657CA /* GlassnodeSwift */; };
+		4A4E86E12B12B75F00F657CA /* GlassnodeSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 4A4E86E02B12B75F00F657CA /* GlassnodeSwift */; };
+		4A4E86E22B12B83F00F657CA /* AppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4E869B2B1261C000F657CA /* AppIntent.swift */; };
 		4A8229762B07F38F00AB611D /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A82293D2B07A39D00AB611D /* WidgetKit.framework */; };
 		4A8229772B07F38F00AB611D /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A82293F2B07A39D00AB611D /* SwiftUI.framework */; };
 		4A8229852B07F39000AB611D /* MetricWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 4A8229752B07F38F00AB611D /* MetricWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -57,6 +77,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4A208F662B13637500F680EB /* MetricAssetAppEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricAssetAppEntity.swift; sourceTree = "<group>"; };
+		4A208F692B1364E600F680EB /* MetricAppEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricAppEntity.swift; sourceTree = "<group>"; };
 		4A4E867D2B125FFE00F657CA /* GlassnodeAtAGlance-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GlassnodeAtAGlance-Info.plist"; sourceTree = "<group>"; };
 		4A4E86892B1261B000F657CA /* GlassnodeAtAGlanceApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlassnodeAtAGlanceApp.swift; sourceTree = "<group>"; };
 		4A4E868A2B1261B000F657CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -75,6 +97,12 @@
 		4A4E86A42B1261C000F657CA /* MetricWidget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetricWidget.swift; sourceTree = "<group>"; };
 		4A4E86A52B1261C000F657CA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A4E86B72B12620B00F657CA /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		4A4E86C92B12942A00F657CA /* LineChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineChartView.swift; sourceTree = "<group>"; };
+		4A4E86CC2B12949800F657CA /* MetricWidgetTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricWidgetTitle.swift; sourceTree = "<group>"; };
+		4A4E86CE2B1294AC00F657CA /* MetricWidgetCurrentValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricWidgetCurrentValue.swift; sourceTree = "<group>"; };
+		4A4E86D02B1294C800F657CA /* MetricWidgetDeltaValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricWidgetDeltaValue.swift; sourceTree = "<group>"; };
+		4A4E86D22B1294E500F657CA /* MetricWidgetDataRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricWidgetDataRow.swift; sourceTree = "<group>"; };
+		4A4E86D92B12951500F657CA /* Format.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Format.swift; sourceTree = "<group>"; };
 		4A8229252B07A34A00AB611D /* GlassnodeAtAGlance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GlassnodeAtAGlance.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A82293D2B07A39D00AB611D /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		4A82293F2B07A39D00AB611D /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
@@ -86,6 +114,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A4E86DF2B12B75B00F657CA /* GlassnodeSwift in Frameworks */,
 				4A4E86C32B12630400F657CA /* KeychainSwift in Frameworks */,
 				4A24426F2B12475A00EBCCDC /* SwiftUI.framework in Frameworks */,
 			);
@@ -98,12 +127,22 @@
 				4A4E86C52B12630A00F657CA /* KeychainSwift in Frameworks */,
 				4A8229772B07F38F00AB611D /* SwiftUI.framework in Frameworks */,
 				4A8229762B07F38F00AB611D /* WidgetKit.framework in Frameworks */,
+				4A4E86E12B12B75F00F657CA /* GlassnodeSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4A208F652B13636200F680EB /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				4A208F662B13637500F680EB /* MetricAssetAppEntity.swift */,
+				4A208F692B1364E600F680EB /* MetricAppEntity.swift */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
 		4A4E86882B1261B000F657CA /* GlassnodeAtAGlance */ = {
 			isa = PBXGroup;
 			children = (
@@ -138,6 +177,9 @@
 		4A4E86982B1261C000F657CA /* MetricWidget */ = {
 			isa = PBXGroup;
 			children = (
+				4A208F652B13636200F680EB /* Configuration */,
+				4A4E86D82B12950700F657CA /* Utils */,
+				4A4E86C82B12941300F657CA /* Components */,
 				4A4E86992B1261C000F657CA /* MetricWidgetBundle.swift */,
 				4A4E869A2B1261C000F657CA /* Assets.xcassets */,
 				4A4E869B2B1261C000F657CA /* AppIntent.swift */,
@@ -173,6 +215,26 @@
 				4A4E86A32B1261C000F657CA /* profit_count.json */,
 			);
 			path = ProfitCount;
+			sourceTree = "<group>";
+		};
+		4A4E86C82B12941300F657CA /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				4A4E86C92B12942A00F657CA /* LineChartView.swift */,
+				4A4E86CC2B12949800F657CA /* MetricWidgetTitle.swift */,
+				4A4E86CE2B1294AC00F657CA /* MetricWidgetCurrentValue.swift */,
+				4A4E86D02B1294C800F657CA /* MetricWidgetDeltaValue.swift */,
+				4A4E86D22B1294E500F657CA /* MetricWidgetDataRow.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		4A4E86D82B12950700F657CA /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				4A4E86D92B12951500F657CA /* Format.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		4A82291C2B07A34900AB611D = {
@@ -224,6 +286,7 @@
 			name = GlassnodeAtAGlance;
 			packageProductDependencies = (
 				4A4E86C22B12630400F657CA /* KeychainSwift */,
+				4A4E86DE2B12B75B00F657CA /* GlassnodeSwift */,
 			);
 			productName = GlassnodeAtAGlance;
 			productReference = 4A8229252B07A34A00AB611D /* GlassnodeAtAGlance.app */;
@@ -244,6 +307,7 @@
 			name = MetricWidgetExtension;
 			packageProductDependencies = (
 				4A4E86C42B12630A00F657CA /* KeychainSwift */,
+				4A4E86E02B12B75F00F657CA /* GlassnodeSwift */,
 			);
 			productName = MetricWidgetExtension;
 			productReference = 4A8229752B07F38F00AB611D /* MetricWidgetExtension.appex */;
@@ -279,6 +343,7 @@
 			mainGroup = 4A82291C2B07A34900AB611D;
 			packageReferences = (
 				4A4E86BF2B1262D500F657CA /* XCRemoteSwiftPackageReference "keychain-swift" */,
+				4A4E86DD2B12B73500F657CA /* XCLocalSwiftPackageReference "../glassnode-swift" */,
 			);
 			productRefGroup = 4A8229262B07A34A00AB611D /* Products */;
 			projectDirPath = "";
@@ -317,11 +382,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A4E86DA2B12951500F657CA /* Format.swift in Sources */,
+				4A208F6A2B1364E600F680EB /* MetricAppEntity.swift in Sources */,
 				4A4E86962B1261B000F657CA /* KeychainStore.swift in Sources */,
+				4A4E86CF2B1294AC00F657CA /* MetricWidgetCurrentValue.swift in Sources */,
 				4A4E86922B1261B000F657CA /* GlassnodeAtAGlanceApp.swift in Sources */,
+				4A4E86CD2B12949800F657CA /* MetricWidgetTitle.swift in Sources */,
+				4A208F672B13637500F680EB /* MetricAssetAppEntity.swift in Sources */,
+				4A4E86DC2B12A1CF00F657CA /* ProfitCountDataModel.swift in Sources */,
 				4A4E86972B1261B000F657CA /* SharedDefaults.swift in Sources */,
 				4A4E86B82B12620B00F657CA /* ContentView.swift in Sources */,
+				4A4E86E22B12B83F00F657CA /* AppIntent.swift in Sources */,
 				4A4E86952B1261B000F657CA /* MainWindowView.swift in Sources */,
+				4A4E86CA2B12942A00F657CA /* LineChartView.swift in Sources */,
+				4A4E86D12B1294C800F657CA /* MetricWidgetDeltaValue.swift in Sources */,
+				4A4E86D32B1294E500F657CA /* MetricWidgetDataRow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,10 +405,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A4E86B22B1261D100F657CA /* MetricService.swift in Sources */,
+				4A208F6B2B1364E600F680EB /* MetricAppEntity.swift in Sources */,
 				4A4E86B32B1261D500F657CA /* MetricWidget.swift in Sources */,
+				4A4E86DB2B12952D00F657CA /* Format.swift in Sources */,
+				4A4E86D72B1294FE00F657CA /* MetricWidgetDataRow.swift in Sources */,
 				4A4E86B52B1261DD00F657CA /* ProfitCountDataModel.swift in Sources */,
+				4A208F682B13637500F680EB /* MetricAssetAppEntity.swift in Sources */,
+				4A4E86CB2B12947400F657CA /* LineChartView.swift in Sources */,
 				4A4E86AF2B1261C800F657CA /* MetricWidgetBundle.swift in Sources */,
 				4A4E86BD2B12623700F657CA /* KeychainStore.swift in Sources */,
+				4A4E86D42B1294FE00F657CA /* MetricWidgetTitle.swift in Sources */,
+				4A4E86D52B1294FE00F657CA /* MetricWidgetCurrentValue.swift in Sources */,
+				4A4E86D62B1294FE00F657CA /* MetricWidgetDeltaValue.swift in Sources */,
 				4A4E86B12B1261CD00F657CA /* AppIntent.swift in Sources */,
 				4A4E86BE2B12623900F657CA /* SharedDefaults.swift in Sources */,
 			);
@@ -404,6 +487,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -460,6 +544,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -506,7 +591,6 @@
 				SUPPORTED_PLATFORMS = macosx;
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "GlassnodeAtAGlance-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
@@ -552,7 +636,6 @@
 				SUPPORTED_PLATFORMS = macosx;
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "GlassnodeAtAGlance-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
@@ -651,6 +734,13 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCLocalSwiftPackageReference section */
+		4A4E86DD2B12B73500F657CA /* XCLocalSwiftPackageReference "../glassnode-swift" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = "../glassnode-swift";
+		};
+/* End XCLocalSwiftPackageReference section */
+
 /* Begin XCRemoteSwiftPackageReference section */
 		4A4E86BF2B1262D500F657CA /* XCRemoteSwiftPackageReference "keychain-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
@@ -672,6 +762,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 4A4E86BF2B1262D500F657CA /* XCRemoteSwiftPackageReference "keychain-swift" */;
 			productName = KeychainSwift;
+		};
+		4A4E86DE2B12B75B00F657CA /* GlassnodeSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4A4E86DD2B12B73500F657CA /* XCLocalSwiftPackageReference "../glassnode-swift" */;
+			productName = GlassnodeSwift;
+		};
+		4A4E86E02B12B75F00F657CA /* GlassnodeSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4A4E86DD2B12B73500F657CA /* XCLocalSwiftPackageReference "../glassnode-swift" */;
+			productName = GlassnodeSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
