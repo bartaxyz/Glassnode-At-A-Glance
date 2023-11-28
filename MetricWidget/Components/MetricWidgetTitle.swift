@@ -16,6 +16,8 @@ struct MetricWidgetTitle : View {
             Text(asset + ": " + label)
                 .opacity(0.5)
                 .fontWeight(.medium)
+        } else {
+            Text("-: -")
         }
     }
 }
