@@ -15,7 +15,7 @@ struct MetricWidgetDeltaValue : View {
         let deltaValue = lastValue - firstValue
         let deltaPercent = String(format: "%.2f", (100.0 / firstValue) * Double(deltaValue))
         let arrow = deltaValue > 0 ? "▲" : "▼"
-        let symbol = deltaValue > 0 ? "+" : "-"
+        let symbol = deltaValue > 0 ? "+" : ""
         let color = deltaValue > 0 ? Color.green : Color.red
         let backgroundColor = color.opacity(0.1)
         
